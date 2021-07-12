@@ -6,5 +6,13 @@ const isPrime = (num, div = 3) => {
     return isPrime(num, div + 2);
 }
 
-console.log(isPrime(7));
-console.log(isPrime(4));
+const findPrime = (num) => {
+    if (isPrime(num)){
+        return num;
+    } else {
+        return findPrime(num -1);
+    }
+}
+
+console.log(findPrime(7));
+console.log(findPrime(4));
